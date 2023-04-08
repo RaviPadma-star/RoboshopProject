@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  web:
+    - image: 'web:robo'
+    - container_name: web
+    - depends_on:
+        - catalouge
+  mongo:
+    - image: 'mongodb:robo'
+    - container_name: mongodb
+  catalogue:
+    - image: 'catalogue:robo'
+    - container_name: catalogue
+    - depends_on:
+        - mongodb
+networks:
+  - roboshop-network:
+      - driver: bridge
