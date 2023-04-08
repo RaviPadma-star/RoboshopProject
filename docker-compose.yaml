@@ -8,8 +8,6 @@ services:
   mongo:
     - image: 'mongodb:robo'
     - container_name: mongodb
-  redis:
-    - image: redis
   catalogue:
     - image: 'catalogue:robo'
     - container_name: catalogue
@@ -24,3 +22,5 @@ services:
 networks:
   - roboshop-network:
       - driver: bridge
+redis:
+    - image: redis
