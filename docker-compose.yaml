@@ -16,7 +16,9 @@ services:
   user:
     image: 'user:robo'
     container_name: user
-    depends_on: mongodb redis
+    depends_on: 
+      - mongodb 
+      - redis
 networks:
   roboshop-network:
     driver: bridge
