@@ -4,7 +4,7 @@ services:
    image: 'web:robo'
    container_name: web
    depends_on:
-    catalogue
+    - catalogue
   mongo:
    image: 'mongodb:robo'
    container_name: mongodb
