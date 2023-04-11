@@ -9,7 +9,7 @@ services:
       - catalogue
       - user
       - cart
-  mongodb:
+  mongo:
     image: 'mongodb:robo'
     container_name: mongodb
   catalogue:
