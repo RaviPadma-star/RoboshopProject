@@ -6,7 +6,7 @@ services:
     depends_on:
       - catalogue
     ports: 
-      -"80":"80"
+      - "80":"80"
   mongodb:
     image: 'mongodb:robo'
     container_name: mongodb
