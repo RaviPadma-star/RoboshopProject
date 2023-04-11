@@ -7,9 +7,6 @@ services:
       - '80:80'
     depends_on:
       - catalogue
-      - user
-      - cart
-      - shipping
   mongo:
     image: 'mongo:robo'
     container_name: mongodb
