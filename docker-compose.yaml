@@ -5,8 +5,6 @@ services:
     container_name: web
     ports:
       - '80:80'
-    depends_on:
-      - catalogue
   mongo:
     image: 'mongo:robo'
     container_name: mongodb
