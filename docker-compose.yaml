@@ -5,6 +5,8 @@ services:
     container_name: web
     depends_on:
       - catalogue
+    ports: 
+      - "80":"80"
   mongodb:
     image: 'mongodb:robo'
     container_name: mongodb
@@ -21,8 +23,6 @@ services:
     depends_on: 
       - mongodb 
       - redis
-  ports: 
-    - "80":"80"
 networks:
   roboshop-network:
     driver: bridge
