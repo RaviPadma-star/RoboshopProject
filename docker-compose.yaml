@@ -10,7 +10,6 @@ services:
       - user
       - cart
       - shipping
-      - payment
   mongo:
     image: 'mongo:robo'
     container_name: mongodb
