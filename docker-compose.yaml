@@ -3,6 +3,8 @@ services:
   web:
     image: 'web:robo'
     container_name: web
+    ports: 
+    - "80:80"
     depends_on:
       - catalogue
   mongodb:
