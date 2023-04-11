@@ -12,7 +12,7 @@ services:
     image: 'catalogue:robo'
     container_name: catalogue
     depends_on:
-    - mongodb
+      - mongodb
   redis:
     image: redis
   user:
