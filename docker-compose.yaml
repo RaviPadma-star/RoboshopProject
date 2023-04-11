@@ -7,6 +7,8 @@ services:
     - "80:80"
     depends_on:
       - catalogue
+      - user
+      - cart
   mongodb:
     image: 'mongodb:robo'
     container_name: mongodb
@@ -22,6 +24,11 @@ services:
     container_name: user
     depends_on: 
       - mongodb 
+      - redis
+  cart:
+    image: "cart:robo"
+    container_name: cart
+    depends_on:
       - redis
 networks:
   roboshop-network:
