@@ -3,14 +3,16 @@ services:
   web:
     image: 'web:robo'
     container_name: web
-    ports: 
-    - "80:80"
+    ports:
+      - '80:80'
     depends_on:
       - catalogue
       - user
       - cart
+      - shipping
+      - payment
   mongo:
-    image: 'mongo:robo'
+    image: 'mongodb:robo'
     container_name: mongodb
   catalogue:
     image: 'catalogue:robo'
@@ -22,29 +24,29 @@ services:
   user:
     image: 'user:robo'
     container_name: user
-    depends_on: 
-      - mongodb 
+    depends_on:
+      - mongodb
       - redis
   cart:
-    image: "cart:robo"
+    image: 'cart:robo'
     container_name: cart
     depends_on:
       - redis
   shipping:
-    image: "shipping:robo"
+    image: 'shipping:robo'
     container_name: shipping
     depends_on:
       - mysql
   mysql:
-    image: "mysql:robo"
+    image: 'mysql:robo'
     container_name: mysql
   payment:
-    image: "payment:robo"
+    image: 'payment:robo'
     container_name: payment
     depends_on:
       - rabbitmq
   rabbitmq:
-    image: "rabbitmq"
+    image: rabbitmq
     container_name: rabbitmq
 networks:
   roboshop-network:
