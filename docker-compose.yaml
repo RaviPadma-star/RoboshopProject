@@ -44,7 +44,7 @@ services:
     depends_on:
       - rabbitmq
   rabbitmq:
-    image: "rabbitmq"
+    image: rabbitmq
     container_name: rabbitmq
 networks:
   roboshop-network:
