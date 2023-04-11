@@ -9,7 +9,7 @@ services:
       - catalogue
       - user
       - cart
-  mongodb:
+  mongo:
     image: 'mongodb:robo'
     container_name: mongodb
   catalogue:
@@ -44,7 +44,7 @@ services:
     depends_on:
       - rabbitmq
   rabbitmq:
-    image: rabbitmq
+    image: "rabbitmq"
     container_name: rabbitmq
 networks:
   roboshop-network:
