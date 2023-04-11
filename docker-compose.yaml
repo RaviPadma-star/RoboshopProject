@@ -40,14 +40,6 @@ services:
   mysql:
     image: 'mysql:robo'
     container_name: mysql
-  payment:
-    image: 'payment:robo'
-    container_name: payment
-    depends_on:
-      - rabbitmq
-  rabbitmq:
-    image: "rabbitmq"
-    container_name: rabbitmq
 networks:
   roboshop-network:
     driver: bridge
