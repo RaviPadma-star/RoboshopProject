@@ -10,7 +10,7 @@ services:
       - user
       - cart
   mongo:
-    image: 'mongodb:robo'
+    image: 'mongo:robo'
     container_name: mongodb
   catalogue:
     image: 'catalogue:robo'
