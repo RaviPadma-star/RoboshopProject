@@ -21,7 +21,8 @@ services:
     depends_on: 
       - mongodb 
       - redis
+  ports:
+    - "80":"80"
 networks:
   roboshop-network:
     driver: bridge
-
