@@ -47,7 +47,7 @@ services:
     volumes: 
     - rabbitmq:/var/lib/rabbitmq
   payment:
-    image: "paymen:robo"
+    image: "payment:robo"
     container_name: payment
     depends_on:
       - rabbitmq
