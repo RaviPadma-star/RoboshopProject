@@ -52,7 +52,7 @@ services:
     depends_on:
       - rabbitmq
   ratings:
-    image: "ratings:robo"
+    image: "rating:robo"
     container_name: ratings
 networks:
   roboshop-network:
