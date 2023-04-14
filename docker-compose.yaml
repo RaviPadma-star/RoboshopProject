@@ -34,7 +34,7 @@ services:
     image: 'mongo:robo'
     container_name: mongodb
     volumes:
-    - mongodb: /data/db
+    - mongodb:/data/db
   catalogue:
     image: 'catalogue:robo'
     container_name: catalogue
@@ -44,7 +44,7 @@ services:
     image: redis
     container_name: redis
     volumes:
-    - redis: /data 
+    - redis:/data 
   user:
     image: 'user:robo'
     container_name: user
@@ -70,7 +70,7 @@ services:
     image: rabbitmq
     container_name: rabbitmq
     volumes: 
-    - rabbitmq: /var/lib/rabbitmq
+    - rabbitmq:/var/lib/rabbitmq
   payment:
     image: "payment:robo"
     container_name: payment
